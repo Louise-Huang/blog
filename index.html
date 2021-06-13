@@ -179,7 +179,7 @@
               <span class="post-meta-item-text">發表於</span>
               
 
-              <time title="創建時間：2021-06-13 17:49:30 / 修改時間：19:07:27" itemprop="dateCreated datePublished" datetime="2021-06-13T17:49:30+08:00">2021-06-13</time>
+              <time title="創建時間：2021-06-13 17:49:30 / 修改時間：23:58:30" itemprop="dateCreated datePublished" datetime="2021-06-13T17:49:30+08:00">2021-06-13</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -204,23 +204,14 @@
       
           <p>本文為觀看<a target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PLqivELodHt3iL9PgGHg0_EF86FwdiqCre">金魚網頁設計入門</a>、<a target="_blank" rel="noopener" href="https://www.hexschool.com/courses/jquery_ani.html">六角學院jQuery</a>課程的學習紀錄。</p>
 <h2 id="jQuery入門"><a href="#jQuery入門" class="headerlink" title="jQuery入門"></a>jQuery入門</h2><h3 id="什麼是jQuery？"><a href="#什麼是jQuery？" class="headerlink" title="什麼是jQuery？"></a>什麼是jQuery？</h3><p>jQuery是一個以Javascript來編寫的函式庫，讓開發者能夠更方便操作網頁DOM元素、建立動畫效果以及使用Ajax串接API。</p>
-<h3 id="安裝jQuery"><a href="#安裝jQuery" class="headerlink" title="安裝jQuery"></a>安裝jQuery</h3><h4 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h4><p>可以從Google提供的<a target="_blank" rel="noopener" href="https://developers.google.com/speed/libraries">開發者函式庫</a>中尋找</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h4 id="Download-API"><a href="#Download-API" class="headerlink" title="Download API"></a>Download API</h4><p>直接搜尋CDN的網址並右鍵存儲至本地端</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;js/jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="環境建置"><a href="#環境建置" class="headerlink" title="環境建置"></a>環境建置</h3><p>通常為了節省效能，會將導入的部分放在body標籤裡面最下方，避免JQuery導入完成但HTML DOM架構尚未讀取完成所浪費的等待時間。</p>
-<blockquote>
-<p>VS Code插件<strong>JQuery Code Snippets</strong>，輸入「jqdo」可以快速設置環境</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; <span class="comment">//當jQuery核心準備好的時候執行ready裡面的事件</span></span><br><span class="line">	...</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h2 id="選擇器與事件"><a href="#選擇器與事件" class="headerlink" title="選擇器與事件"></a>選擇器與事件</h2><p>jQuery以$符號加上class與id的名稱或標籤名稱作為DOM元素的選擇器，搭配<a target="_blank" rel="noopener" href="https://api.jquery.com/category/events/mouse-events/">滑鼠事件</a>製造出動畫效果。</p>
-<h3 id="Click-事件、show-、hide-、toggle-開關效果"><a href="#Click-事件、show-、hide-、toggle-開關效果" class="headerlink" title="Click()事件、show()、hide()、toggle()開關效果"></a>Click()事件、show()、hide()、toggle()開關效果</h3><p>最常見的是以滑鼠點擊事件來執行動畫效果，toogle()可以自動切換show/hide</p>
-<!-- <iframe id="cp_embed_GRWwZwW" src="//codepen.io/LouiseHuang/embed/GRWwZwW?height=[300&theme-id=dark&slug-hash=GRWwZwW&default-tab=[js,result" scrolling="no" frameborder="no" height="[300" allowTransparency="true" allowfullscreen="true" class="cp_embed_iframe" style="width: ]]; overflow: hidden;"></iframe> -->
-<iframe height="265" style="width: 100%;" scrolling="no" title="GRWwZwW" src="https://codepen.io/LouiseHuang/embed/GRWwZwW?height=265&theme-id=dark&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a target="_blank" rel="noopener" href='https://codepen.io/LouiseHuang/pen/GRWwZwW'>GRWwZwW</a> by Louise
-  (<a target="_blank" rel="noopener" href='https://codepen.io/LouiseHuang'>@LouiseHuang</a>) on <a target="_blank" rel="noopener" href='https://codepen.io'>CodePen</a>.
-</iframe>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/blog/20210613/174930/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 

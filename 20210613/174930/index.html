@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"louise-huang.github.io","root":"/blog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="本文為觀看金魚網頁設計入門、六角學院jQuery課程的學習紀錄。 jQuery入門什麼是jQuery？jQuery是一個以Javascript來編寫的函式庫，讓開發者能夠更方便操作網頁DOM元素、建立動畫效果以及使用Ajax串接API。 安裝jQueryCDN可以從Google提供的開發者函式庫中尋找 1&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;ajax.googleapis.co">
+  <meta name="description" content="本文為觀看金魚網頁設計入門、六角學院jQuery課程的學習紀錄。 jQuery入門什麼是jQuery？jQuery是一個以Javascript來編寫的函式庫，讓開發者能夠更方便操作網頁DOM元素、建立動畫效果以及使用Ajax串接API。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="線上課程筆記 – jQuery (Updating)">
 <meta property="og:url" content="http://louise-huang.github.io/blog/20210613/174930/index.html">
 <meta property="og:site_name" content="Mr.Louise 小路先生">
-<meta property="og:description" content="本文為觀看金魚網頁設計入門、六角學院jQuery課程的學習紀錄。 jQuery入門什麼是jQuery？jQuery是一個以Javascript來編寫的函式庫，讓開發者能夠更方便操作網頁DOM元素、建立動畫效果以及使用Ajax串接API。 安裝jQueryCDN可以從Google提供的開發者函式庫中尋找 1&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;ajax.googleapis.co">
+<meta property="og:description" content="本文為觀看金魚網頁設計入門、六角學院jQuery課程的學習紀錄。 jQuery入門什麼是jQuery？jQuery是一個以Javascript來編寫的函式庫，讓開發者能夠更方便操作網頁DOM元素、建立動畫效果以及使用Ajax串接API。">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2021-06-13T09:49:30.000Z">
-<meta property="article:modified_time" content="2021-06-13T11:07:27.313Z">
+<meta property="article:modified_time" content="2021-06-13T15:58:30.730Z">
 <meta property="article:author" content="Louise Huang">
 <meta property="article:tag" content="Javascript">
 <meta property="article:tag" content="jQuery">
@@ -183,7 +183,7 @@
               <span class="post-meta-item-text">發表於</span>
               
 
-              <time title="創建時間：2021-06-13 17:49:30 / 修改時間：19:07:27" itemprop="dateCreated datePublished" datetime="2021-06-13T17:49:30+08:00">2021-06-13</time>
+              <time title="創建時間：2021-06-13 17:49:30 / 修改時間：23:58:30" itemprop="dateCreated datePublished" datetime="2021-06-13T17:49:30+08:00">2021-06-13</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -208,6 +208,7 @@
       
         <p>本文為觀看<a target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PLqivELodHt3iL9PgGHg0_EF86FwdiqCre">金魚網頁設計入門</a>、<a target="_blank" rel="noopener" href="https://www.hexschool.com/courses/jquery_ani.html">六角學院jQuery</a>課程的學習紀錄。</p>
 <h2 id="jQuery入門"><a href="#jQuery入門" class="headerlink" title="jQuery入門"></a>jQuery入門</h2><h3 id="什麼是jQuery？"><a href="#什麼是jQuery？" class="headerlink" title="什麼是jQuery？"></a>什麼是jQuery？</h3><p>jQuery是一個以Javascript來編寫的函式庫，讓開發者能夠更方便操作網頁DOM元素、建立動畫效果以及使用Ajax串接API。</p>
+<a id="more"></a>
 <h3 id="安裝jQuery"><a href="#安裝jQuery" class="headerlink" title="安裝jQuery"></a>安裝jQuery</h3><h4 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h4><p>可以從Google提供的<a target="_blank" rel="noopener" href="https://developers.google.com/speed/libraries">開發者函式庫</a>中尋找</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h4 id="Download-API"><a href="#Download-API" class="headerlink" title="Download API"></a>Download API</h4><p>直接搜尋CDN的網址並右鍵存儲至本地端</p>
@@ -218,13 +219,25 @@
 </blockquote>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; <span class="comment">//當jQuery核心準備好的時候執行ready裡面的事件</span></span><br><span class="line">	...</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h2 id="選擇器與事件"><a href="#選擇器與事件" class="headerlink" title="選擇器與事件"></a>選擇器與事件</h2><p>jQuery以$符號加上class與id的名稱或標籤名稱作為DOM元素的選擇器，搭配<a target="_blank" rel="noopener" href="https://api.jquery.com/category/events/mouse-events/">滑鼠事件</a>製造出動畫效果。</p>
-<h3 id="Click-事件、show-、hide-、toggle-開關效果"><a href="#Click-事件、show-、hide-、toggle-開關效果" class="headerlink" title="Click()事件、show()、hide()、toggle()開關效果"></a>Click()事件、show()、hide()、toggle()開關效果</h3><p>最常見的是以滑鼠點擊事件來執行動畫效果，toogle()可以自動切換show/hide</p>
-<!-- <iframe id="cp_embed_GRWwZwW" src="//codepen.io/LouiseHuang/embed/GRWwZwW?height=[300&theme-id=dark&slug-hash=GRWwZwW&default-tab=[js,result" scrolling="no" frameborder="no" height="[300" allowTransparency="true" allowfullscreen="true" class="cp_embed_iframe" style="width: ]]; overflow: hidden;"></iframe> -->
-<iframe height="265" style="width: 100%;" scrolling="no" title="GRWwZwW" src="https://codepen.io/LouiseHuang/embed/GRWwZwW?height=265&theme-id=dark&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a target="_blank" rel="noopener" href='https://codepen.io/LouiseHuang/pen/GRWwZwW'>GRWwZwW</a> by Louise
-  (<a target="_blank" rel="noopener" href='https://codepen.io/LouiseHuang'>@LouiseHuang</a>) on <a target="_blank" rel="noopener" href='https://codepen.io'>CodePen</a>.
-</iframe>
+<h2 id="jQuery選擇器與事件"><a href="#jQuery選擇器與事件" class="headerlink" title="jQuery選擇器與事件"></a>jQuery選擇器與事件</h2><p>jQuery以$符號加上class與id的名稱或標籤名稱作為DOM元素的選擇器，搭配<a target="_blank" rel="noopener" href="https://api.jquery.com/category/events/mouse-events/">滑鼠事件</a>製造出動畫效果。</p>
+<h3 id="Click事件、show、hide、toggle開關效果"><a href="#Click事件、show、hide、toggle開關效果" class="headerlink" title="Click事件、show、hide、toggle開關效果"></a>Click事件、show、hide、toggle開關效果</h3><p>最常見的是以滑鼠點擊事件來執行動畫效果，toogle可以自動切換show/hide</p>
+<iframe src="https://codepen.io/LouiseHuang/embed/GRWwZwW?height=265&theme-id=default&default-tab=js,result" width="100%" height="300" frameborder="0" loading="lazy" allowfullscreen></iframe>
+
+<h4 id="蓋版廣告"><a href="#蓋版廣告" class="headerlink" title="蓋版廣告"></a>蓋版廣告</h4><iframe src="https://codepen.io/LouiseHuang/embed/oNZQBqW?height=265&theme-id=default&default-tab=html,result" width="100%" height="300" frameborder="0" loading="lazy" allowfullscreen></iframe>
+
+<h2 id="jQuery常見動畫效果"><a href="#jQuery常見動畫效果" class="headerlink" title="jQuery常見動畫效果"></a>jQuery常見動畫效果</h2><blockquote>
+<p>淡入淡出：fadeIn、fadeOut、fadeToggle<br>滑動：slideUp、slideDown、slideToggle</p>
+</blockquote>
+<p>可自行定義動畫執行時間 fadeIn(ms)</p>
+<iframe src="https://codepen.io/LouiseHuang/embed/Rwpqpoq?height=265&theme-id=default&default-tab=js,result" width="100%" height="300" frameborder="0" loading="lazy" allowfullscreen></iframe>
+
+<h3 id="鏈式寫法Chaining"><a href="#鏈式寫法Chaining" class="headerlink" title="鏈式寫法Chaining"></a>鏈式寫法Chaining</h3><p>通常只寫一個動畫表示某物件只會執行一個動畫，如果想要連續執行多個動畫可以將他們鏈接在一起。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&#x27;.full-screen&#x27;</span>).fadeOut(<span class="number">3000</span>).fadeIn(<span class="number">1000</span>).fadeOut(<span class="number">1000</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="CSS控制jQuery"><a href="#CSS控制jQuery" class="headerlink" title="CSS控制jQuery"></a>CSS控制jQuery</h2><blockquote>
+<p>addClass、removeClass、toggleClass</p>
+</blockquote>
+<iframe src="https://codepen.io/LouiseHuang/embed/zYZMNmB?height=265&theme-id=defult&default-tab=js,result" width="100%" height="300" frameborder="0" loading="lazy" allowfullscreen></iframe>
+
     </div>
 
     
@@ -305,7 +318,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#jQuery%E5%85%A5%E9%96%80"><span class="nav-number">1.</span> <span class="nav-text">jQuery入門</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E9%BA%BC%E6%98%AFjQuery%EF%BC%9F"><span class="nav-number">1.1.</span> <span class="nav-text">什麼是jQuery？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%9DjQuery"><span class="nav-number">1.2.</span> <span class="nav-text">安裝jQuery</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#CDN"><span class="nav-number">1.2.1.</span> <span class="nav-text">CDN</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Download-API"><span class="nav-number">1.2.2.</span> <span class="nav-text">Download API</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%92%B0%E5%A2%83%E5%BB%BA%E7%BD%AE"><span class="nav-number">1.3.</span> <span class="nav-text">環境建置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%81%B8%E6%93%87%E5%99%A8%E8%88%87%E4%BA%8B%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">選擇器與事件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Click-%E4%BA%8B%E4%BB%B6%E3%80%81show-%E3%80%81hide-%E3%80%81toggle-%E9%96%8B%E9%97%9C%E6%95%88%E6%9E%9C"><span class="nav-number">2.1.</span> <span class="nav-text">Click()事件、show()、hide()、toggle()開關效果</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#jQuery%E5%85%A5%E9%96%80"><span class="nav-number">1.</span> <span class="nav-text">jQuery入門</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E9%BA%BC%E6%98%AFjQuery%EF%BC%9F"><span class="nav-number">1.1.</span> <span class="nav-text">什麼是jQuery？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%9DjQuery"><span class="nav-number">1.2.</span> <span class="nav-text">安裝jQuery</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#CDN"><span class="nav-number">1.2.1.</span> <span class="nav-text">CDN</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Download-API"><span class="nav-number">1.2.2.</span> <span class="nav-text">Download API</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%92%B0%E5%A2%83%E5%BB%BA%E7%BD%AE"><span class="nav-number">1.3.</span> <span class="nav-text">環境建置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jQuery%E9%81%B8%E6%93%87%E5%99%A8%E8%88%87%E4%BA%8B%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">jQuery選擇器與事件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Click%E4%BA%8B%E4%BB%B6%E3%80%81show%E3%80%81hide%E3%80%81toggle%E9%96%8B%E9%97%9C%E6%95%88%E6%9E%9C"><span class="nav-number">2.1.</span> <span class="nav-text">Click事件、show、hide、toggle開關效果</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%93%8B%E7%89%88%E5%BB%A3%E5%91%8A"><span class="nav-number">2.1.1.</span> <span class="nav-text">蓋版廣告</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jQuery%E5%B8%B8%E8%A6%8B%E5%8B%95%E7%95%AB%E6%95%88%E6%9E%9C"><span class="nav-number">3.</span> <span class="nav-text">jQuery常見動畫效果</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%8F%88%E5%BC%8F%E5%AF%AB%E6%B3%95Chaining"><span class="nav-number">3.1.</span> <span class="nav-text">鏈式寫法Chaining</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS%E6%8E%A7%E5%88%B6jQuery"><span class="nav-number">4.</span> <span class="nav-text">CSS控制jQuery</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
