@@ -22,9 +22,9 @@
 
   <meta name="description" content="時間花在哪裡，成就就在哪裡">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Louise&#39;s Blog">
+<meta property="og:title" content="Mr.Louise 小路先生">
 <meta property="og:url" content="http://louise-huang.github.io/blog/index.html">
-<meta property="og:site_name" content="Louise&#39;s Blog">
+<meta property="og:site_name" content="Mr.Louise 小路先生">
 <meta property="og:description" content="時間花在哪裡，成就就在哪裡">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:author" content="Louise Huang">
@@ -43,7 +43,7 @@
   };
 </script>
 
-  <title>Louise's Blog</title>
+  <title>Mr.Louise 小路先生</title>
   
 
 
@@ -94,9 +94,10 @@
 
     <a href="/blog/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Louise's Blog</h1>
+      <h1 class="site-title">Mr.Louise 小路先生</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
+      <p class="site-subtitle" itemprop="description">Louise's study notes of web</p>
   </div>
 
   <div class="site-nav-right">
@@ -153,6 +154,167 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://louise-huang.github.io/blog/20210613/174930/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/73339662?s=460&u=0e1ebc62ef0b77f265e220c7d0e252a4067077a6&v=4">
+      <meta itemprop="name" content="Louise Huang">
+      <meta itemprop="description" content="時間花在哪裡，成就就在哪裡">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr.Louise 小路先生">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/20210613/174930/" class="post-title-link" itemprop="url">線上課程筆記 – jQuery (Updating)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2021-06-13 17:49:30 / 修改時間：19:07:27" itemprop="dateCreated datePublished" datetime="2021-06-13T17:49:30+08:00">2021-06-13</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Online-course-study-notes/" itemprop="url" rel="index"><span itemprop="name">Online course study notes</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>本文為觀看<a target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PLqivELodHt3iL9PgGHg0_EF86FwdiqCre">金魚網頁設計入門</a>、<a target="_blank" rel="noopener" href="https://www.hexschool.com/courses/jquery_ani.html">六角學院jQuery</a>課程的學習紀錄。</p>
+<h2 id="jQuery入門"><a href="#jQuery入門" class="headerlink" title="jQuery入門"></a>jQuery入門</h2><h3 id="什麼是jQuery？"><a href="#什麼是jQuery？" class="headerlink" title="什麼是jQuery？"></a>什麼是jQuery？</h3><p>jQuery是一個以Javascript來編寫的函式庫，讓開發者能夠更方便操作網頁DOM元素、建立動畫效果以及使用Ajax串接API。</p>
+<h3 id="安裝jQuery"><a href="#安裝jQuery" class="headerlink" title="安裝jQuery"></a>安裝jQuery</h3><h4 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h4><p>可以從Google提供的<a target="_blank" rel="noopener" href="https://developers.google.com/speed/libraries">開發者函式庫</a>中尋找</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="Download-API"><a href="#Download-API" class="headerlink" title="Download API"></a>Download API</h4><p>直接搜尋CDN的網址並右鍵存儲至本地端</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;js/jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="環境建置"><a href="#環境建置" class="headerlink" title="環境建置"></a>環境建置</h3><p>通常為了節省效能，會將導入的部分放在body標籤裡面最下方，避免JQuery導入完成但HTML DOM架構尚未讀取完成所浪費的等待時間。</p>
+<blockquote>
+<p>VS Code插件<strong>JQuery Code Snippets</strong>，輸入「jqdo」可以快速設置環境</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; <span class="comment">//當jQuery核心準備好的時候執行ready裡面的事件</span></span><br><span class="line">	...</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="選擇器與事件"><a href="#選擇器與事件" class="headerlink" title="選擇器與事件"></a>選擇器與事件</h2><p>jQuery以$符號加上class與id的名稱或標籤名稱作為DOM元素的選擇器，搭配<a target="_blank" rel="noopener" href="https://api.jquery.com/category/events/mouse-events/">滑鼠事件</a>製造出動畫效果。</p>
+<h3 id="Click-事件、show-、hide-、toggle-開關效果"><a href="#Click-事件、show-、hide-、toggle-開關效果" class="headerlink" title="Click()事件、show()、hide()、toggle()開關效果"></a>Click()事件、show()、hide()、toggle()開關效果</h3><p>最常見的是以滑鼠點擊事件來執行動畫效果，toogle()可以自動切換show/hide</p>
+<!-- <iframe id="cp_embed_GRWwZwW" src="//codepen.io/LouiseHuang/embed/GRWwZwW?height=[300&theme-id=dark&slug-hash=GRWwZwW&default-tab=[js,result" scrolling="no" frameborder="no" height="[300" allowTransparency="true" allowfullscreen="true" class="cp_embed_iframe" style="width: ]]; overflow: hidden;"></iframe> -->
+<iframe height="265" style="width: 100%;" scrolling="no" title="GRWwZwW" src="https://codepen.io/LouiseHuang/embed/GRWwZwW?height=265&theme-id=dark&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a target="_blank" rel="noopener" href='https://codepen.io/LouiseHuang/pen/GRWwZwW'>GRWwZwW</a> by Louise
+  (<a target="_blank" rel="noopener" href='https://codepen.io/LouiseHuang'>@LouiseHuang</a>) on <a target="_blank" rel="noopener" href='https://codepen.io'>CodePen</a>.
+</iframe>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="http://louise-huang.github.io/blog/20210613/171732/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/73339662?s=460&u=0e1ebc62ef0b77f265e220c7d0e252a4067077a6&v=4">
+      <meta itemprop="name" content="Louise Huang">
+      <meta itemprop="description" content="時間花在哪裡，成就就在哪裡">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr.Louise 小路先生">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/20210613/171732/" class="post-title-link" itemprop="url">前端超好用套件 – Chart.js打造漂亮圖表</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+              
+
+              <time title="創建時間：2021-06-13 17:17:32 / 修改時間：17:17:33" itemprop="dateCreated datePublished" datetime="2021-06-13T17:17:32+08:00">2021-06-13</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/Front-end-technology/" itemprop="url" rel="index"><span itemprop="name">Front-end technology</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><img src="https://i.imgur.com/Hk4CqeM.jpg" alt="Imgur"></p>
+<h2 id="Chart-js介紹"><a href="#Chart-js介紹" class="headerlink" title="Chart.js介紹"></a>Chart.js介紹</h2><p>Chart.js是一款很好用的Javascript套件，可以用來製作八種常見的圖表，甚至可以將圖表種類混合顯示，並且以小動畫的方式呈現，極具美感！<br>由於目前做的專案需要顯示圖表，因而認識Chart.js這個套件，這邊就順便做個學習筆記，主要記錄我有使用到的部分，其他的部分可以參考<a target="_blank" rel="noopener" href="https://www.chartjs.org/docs/latest/">官網</a>喲！</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/blog/20210613/171732/#more" rel="contents">
+                閱讀全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
     <link itemprop="mainEntityOfPage" href="http://louise-huang.github.io/blog/20210130/215704/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -162,7 +324,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Louise's Blog">
+      <meta itemprop="name" content="Mr.Louise 小路先生">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -184,7 +346,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2021-01-31 23:36:23" itemprop="dateModified" datetime="2021-01-31T23:36:23+08:00">2021-01-31</time>
+                <time title="修改時間：2021-06-13 16:55:11" itemprop="dateModified" datetime="2021-06-13T16:55:11+08:00">2021-06-13</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -207,7 +369,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="API介紹"><a href="#API介紹" class="headerlink" title="API介紹"></a>API介紹</h2><h3 id="API實作流程"><a href="#API實作流程" class="headerlink" title="API實作流程"></a>API實作流程</h3><ol>
+          <p><img src="https://i.imgur.com/ZCaGhxF.jpg" alt="Imgur"></p>
+<h2 id="API介紹"><a href="#API介紹" class="headerlink" title="API介紹"></a>API介紹</h2><h3 id="API實作流程"><a href="#API實作流程" class="headerlink" title="API實作流程"></a>API實作流程</h3><ol>
 <li>取得資料</li>
 <li>將資料轉換成HTML放到畫面上</li>
 </ol>
@@ -247,7 +410,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Louise's Blog">
+      <meta itemprop="name" content="Mr.Louise 小路先生">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -368,20 +531,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/blog/categories/">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -435,6 +598,17 @@
   </div>-->
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="總瀏覽次數">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 

@@ -24,19 +24,20 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="前端必備技能 – 使用API串接第三方資料">
 <meta property="og:url" content="http://louise-huang.github.io/blog/20210130/215704/index.html">
-<meta property="og:site_name" content="Louise&#39;s Blog">
+<meta property="og:site_name" content="Mr.Louise 小路先生">
 <meta property="og:description" content="API介紹API實作流程 取得資料 將資料轉換成HTML放到畫面上  什麼是API?應用程式介面 Application Programming Interface舉例：有一台飲料販賣機，你想喝一瓶奶茶，按了飲料機上的奶茶按鈕，奶茶掉下來，取出奶茶。奶茶就是你想取得的資料，按鈕就是API，透過API發送需求來取得資料就是串接API的流程。">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/03383af0-41d4-47dd-a293-38e1c91507bd/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5/20210130/us-west-2/s3/aws4_request&X-Amz-Date=20210130T144719Z&X-Amz-Expires=86400&X-Amz-Signature=14033ae271f369e972945bdf721a523112004bf3f858fb8a069357556ea6953c&X-Amz-SignedHeaders=host&response-content-disposition=filename%20=%22Untitled.png%22">
-<meta property="og:image" content="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/28a452b4-56b3-4699-9551-490b0ddac566/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5/20210130/us-west-2/s3/aws4_request&X-Amz-Date=20210130T144339Z&X-Amz-Expires=86400&X-Amz-Signature=ce37a7ad43607f103971a732651ef2d59a19ce929422caffc5596cceda52df95&X-Amz-SignedHeaders=host&response-content-disposition=filename%20=%22Untitled.png%22">
+<meta property="og:image" content="https://i.imgur.com/ZCaGhxF.jpg">
+<meta property="og:image" content="https://i.imgur.com/gL6hkd9.png">
+<meta property="og:image" content="https://i.imgur.com/fyI8V6g.png">
 <meta property="article:published_time" content="2021-01-30T13:57:04.000Z">
-<meta property="article:modified_time" content="2021-01-31T15:36:23.784Z">
+<meta property="article:modified_time" content="2021-06-13T08:55:11.853Z">
 <meta property="article:author" content="Louise Huang">
 <meta property="article:tag" content="Javascript">
 <meta property="article:tag" content="api">
 <meta property="article:tag" content="ajax">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/03383af0-41d4-47dd-a293-38e1c91507bd/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5/20210130/us-west-2/s3/aws4_request&X-Amz-Date=20210130T144719Z&X-Amz-Expires=86400&X-Amz-Signature=14033ae271f369e972945bdf721a523112004bf3f858fb8a069357556ea6953c&X-Amz-SignedHeaders=host&response-content-disposition=filename%20=%22Untitled.png%22">
+<meta name="twitter:image" content="https://i.imgur.com/ZCaGhxF.jpg">
 
 <link rel="canonical" href="http://louise-huang.github.io/blog/20210130/215704/">
 
@@ -51,7 +52,7 @@
   };
 </script>
 
-  <title>前端必備技能 – 使用API串接第三方資料 | Louise's Blog</title>
+  <title>前端必備技能 – 使用API串接第三方資料 | Mr.Louise 小路先生</title>
   
 
 
@@ -102,9 +103,10 @@
 
     <a href="/blog/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Louise's Blog</h1>
+      <h1 class="site-title">Mr.Louise 小路先生</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
+      <p class="site-subtitle" itemprop="description">Louise's study notes of web</p>
   </div>
 
   <div class="site-nav-right">
@@ -171,7 +173,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Louise's Blog">
+      <meta itemprop="name" content="Mr.Louise 小路先生">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -192,7 +194,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新於</span>
-                <time title="修改時間：2021-01-31 23:36:23" itemprop="dateModified" datetime="2021-01-31T23:36:23+08:00">2021-01-31</time>
+                <time title="修改時間：2021-06-13 16:55:11" itemprop="dateModified" datetime="2021-06-13T16:55:11+08:00">2021-06-13</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -215,7 +217,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="API介紹"><a href="#API介紹" class="headerlink" title="API介紹"></a>API介紹</h2><h3 id="API實作流程"><a href="#API實作流程" class="headerlink" title="API實作流程"></a>API實作流程</h3><ol>
+        <p><img src="https://i.imgur.com/ZCaGhxF.jpg" alt="Imgur"></p>
+<h2 id="API介紹"><a href="#API介紹" class="headerlink" title="API介紹"></a>API介紹</h2><h3 id="API實作流程"><a href="#API實作流程" class="headerlink" title="API實作流程"></a>API實作流程</h3><ol>
 <li>取得資料</li>
 <li>將資料轉換成HTML放到畫面上</li>
 </ol>
@@ -272,9 +275,9 @@
 </ul>
 <p>請求資料格式設定好，還需要提供成功或失敗的訊息讓我們知道結果如何，分別設定在success與error函式裡面</p>
 <ul>
-<li>使用ajax抓取資料有可能會因為同源政策(無法取得不同網域的資料)而被擋<h2 id="跨域方法"><a href="#跨域方法" class="headerlink" title="跨域方法"></a>跨域方法</h2></li>
+<li>使用ajax抓取資料有可能會因為同源政策(無法取得不同網域的資料)而被擋</li>
 </ul>
-<ol>
+<h2 id="跨域方法"><a href="#跨域方法" class="headerlink" title="跨域方法"></a>跨域方法</h2><ol>
 <li>JSONP</li>
 </ol>
 <ul>
@@ -285,11 +288,8 @@
 <li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-TW/docs/Web/HTTP/CORS">CORS</a></li>
 </ol>
 <ul>
-<li><p>Cross-origin resource sharing</p>
-</li>
-<li><p>Access-Control-Allow-Origin定義有哪些domain可以存取API，「*」表示大家都可以</p>
-<p><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/03383af0-41d4-47dd-a293-38e1c91507bd/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5/20210130/us-west-2/s3/aws4_request&X-Amz-Date=20210130T144719Z&X-Amz-Expires=86400&X-Amz-Signature=14033ae271f369e972945bdf721a523112004bf3f858fb8a069357556ea6953c&X-Amz-SignedHeaders=host&response-content-disposition=filename%20=%22Untitled.png%22" alt="Access-Control-Allow-Origin image"></p>
-</li>
+<li>Cross-origin resource sharing</li>
+<li>Access-Control-Allow-Origin定義有哪些domain可以存取API，「*」表示大家都可以<br><img src="https://i.imgur.com/gL6hkd9.png" alt="Imgur"></li>
 </ul>
 <h3 id="JSONP"><a href="#JSONP" class="headerlink" title="JSONP"></a>JSONP</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;script src=<span class="string">&quot;https://code.jquery.com/jquery-1.12.4.min.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">	&lt;script src=<span class="string">&quot;https://vue-course-api.hexschool.io/api/louise819/products?page=:page&amp;callback=hello&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">hello</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">&#x27;hello~&#x27;</span>);</span><br><span class="line">		<span class="built_in">console</span>.log(data);</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 <p>因為<code>&lt;script&gt;</code>標籤不受跨域限制，因此可以直接將API的URL透過<code>&lt;script&gt;</code>放在<code>&lt;head&gt;</code>標籤內，並且在URL尾端加上<code>&amp;callback=hello</code>使用hello函式包住資料<br>缺點：參數都只能帶到URL上面因為<code>&lt;script&gt;</code>無法使用POST或其他方法</p>
@@ -299,7 +299,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;h1&gt;hello&lt;/h1&gt;</span><br><span class="line">  &lt;ul <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;list&quot;</span>&gt;</span><br><span class="line">  &lt;/ul&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="keyword">var</span> openUrl = <span class="string">&quot;https://cloud.culture.tw/frontsite/trans/SearchShowAction.do?method=doFindTypeJ&amp;category=6&quot;</span>;</span><br><span class="line"></span><br><span class="line">  $.ajax(&#123;</span><br><span class="line">    url: openUrl,</span><br><span class="line">    type: <span class="string">&quot;GET&quot;</span>,</span><br><span class="line">    dataType: <span class="string">&quot;json&quot;</span>,</span><br><span class="line">    success: <span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">const</span> charge = [];</span><br><span class="line">      charge.push(...res);</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&quot;charge:&quot;</span>, charge);</span><br><span class="line">			<span class="comment">//以上三行執行結果與console.log(res)相同</span></span><br><span class="line">      createDOMElement(charge); <span class="comment">//執行掛載html函式</span></span><br><span class="line">    &#125;,</span><br><span class="line">    error: <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(err);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">createDOMElement</span>(<span class="params">charge</span>) </span>&#123;</span><br><span class="line">		<span class="comment">//map()會透過函式內回傳的值組合成一個陣列，回傳的數量等於原始陣列的長度</span></span><br><span class="line">		<span class="comment">//如果不回傳則顯示undefined</span></span><br><span class="line">		<span class="comment">//element=[展覽1,展覽2,展覽3...] 再透過join()合併將逗號拿掉</span></span><br><span class="line">    <span class="keyword">const</span> element = charge.map(<span class="function"><span class="keyword">function</span> (<span class="params">place</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="string">`</span></span><br><span class="line"><span class="string">      &lt;li&gt;</span></span><br><span class="line"><span class="string">        &lt;p class=&quot;location&quot;&gt; 展覽: <span class="subst">$&#123;place.title&#125;</span> &lt;/p&gt;</span></span><br><span class="line"><span class="string">        &lt;p class=&quot;address&quot;&gt; 地址: <span class="subst">$&#123;place.showInfo[<span class="number">0</span>].location&#125;</span> &lt;/p&gt;</span></span><br><span class="line"><span class="string">      &lt;/li&gt;</span></span><br><span class="line"><span class="string">      `</span>;</span><br><span class="line">    &#125;).join(<span class="string">&quot;&quot;</span>);</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//掛載html</span></span><br><span class="line">    <span class="keyword">const</span> chargeList = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;.list&#x27;</span>);</span><br><span class="line">    chargeList.innerHTML = element;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 <p>最後的結果如下圖所示</p>
-<p><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/28a452b4-56b3-4699-9551-490b0ddac566/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5/20210130/us-west-2/s3/aws4_request&X-Amz-Date=20210130T144339Z&X-Amz-Expires=86400&X-Amz-Signature=ce37a7ad43607f103971a732651ef2d59a19ce929422caffc5596cceda52df95&X-Amz-SignedHeaders=host&response-content-disposition=filename%20=%22Untitled.png%22" alt="結果圖網址無效"></p>
+<p><img src="https://i.imgur.com/fyI8V6g.png" alt="Imgur"></p>
 
     </div>
 
@@ -323,7 +323,10 @@
     <a href="/blog/20201221/191110/" rel="prev" title="Hello World">
       <i class="fa fa-chevron-left"></i> Hello World
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/blog/20210613/171732/" rel="next" title="前端超好用套件 – Chart.js打造漂亮圖表">
+      前端超好用套件 – Chart.js打造漂亮圖表 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -398,20 +401,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/blog/categories/">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -465,6 +468,17 @@
   </div>-->
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="總瀏覽次數">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 
